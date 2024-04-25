@@ -32,9 +32,9 @@ namespace Bibliotheque
             }
             return false;
         }
-        public Personne DebarquerPassager()
+        public Personne? DebarquerPassager()
         {
-            Personne retour;
+            Personne? retour;
             for (int i = _sections.Length - 1; i >= 0; i--)
             {
                 retour = _sections[i].DebarquerPassager();

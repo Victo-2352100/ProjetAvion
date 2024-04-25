@@ -12,8 +12,10 @@ namespace Bibliotheque
 
         public Habitacle(int tailleHorizontale, int tailleVerticale)
         {
+            if (tailleHorizontale < 1) throw new ArgumentException("La taille horizontale doit être plus grande que 0.");
+
             _rangees = new Rangee[tailleHorizontale];
-            for(int i = 0; i < tailleVerticale;++i)
+            for (int i = 0; i < _rangees.Length ; i++)
             {
                 _rangees[i] = new Rangee(tailleVerticale);
             }
@@ -30,9 +32,9 @@ namespace Bibliotheque
             return false;
         }
 
-        public Personne DebarquerPassager()
+        public Personne? DebarquerPassager()
         {
-            Personne retour;
+            Personne? retour;
             for (int i = _rangees.Length - 1; i >= 0; i--)
             {
                 retour = _rangees[i].DebarquerPassager();

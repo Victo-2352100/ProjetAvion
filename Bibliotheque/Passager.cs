@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace Bibliotheque
 {
+    /// <summary>
+    /// Représente un passager d'un avion.
+    /// </summary>
     public class Passager : Personne
     {
-        private string _coordones;
+        //variables à ajouter éventuellement
+
+        public Passager(string nom) : base(nom)
+        {
+        }
     }
 }

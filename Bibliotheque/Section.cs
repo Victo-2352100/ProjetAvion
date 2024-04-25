@@ -15,10 +15,8 @@ namespace Bibliotheque
 
         public Section(int taille)
         {
-            if(taille <= 0)
-            {
-                throw new ArgumentException("La taille dois être plus grande à zéro");
-            }
+            if (taille < 1) throw new ArgumentException("La taille verticale doit être plus grande que 0.");
+
             _sieges = new Siege[taille];
             for(int i=0; i< taille; i++)
             {
@@ -36,9 +34,9 @@ namespace Bibliotheque
             }
             return false;
         }
-        public Personne DebarquerPassager()
+        public Personne? DebarquerPassager()
         {
-            Personne retour;
+            Personne? retour;
             for (int i = _sieges.Length - 1; i >= 0; i--)
             {
                 retour = _sieges[i].DebarquerPassager();

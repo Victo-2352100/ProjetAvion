@@ -23,6 +23,20 @@ namespace Bibliotheque
         {
             _habitacle = new Habitacle(tailleHorizontale, tailleVerticale);
         }
+
+        /// <summary>
+        /// Construction d'un avion avec un habitacle
+        /// </summary>
+        /// <param name="tailleHorizontale">Nombre de rangées.</param>
+        /// <param name="tailleVerticale">Nombres de colonnes.</param>
+        public Avion(Habitacle habi)
+        {
+            if(habi == null)
+            {
+                throw new ArgumentNullException(nameof(habi));
+            }
+            _habitacle = habi;
+        }
         /// <summary>
         /// Ajoute un passager au premier siège trouvé.
         /// </summary>
@@ -47,6 +61,10 @@ namespace Bibliotheque
         public void Assigner(Equipe equipe)
         {
             this._equipe = equipe;
+        }
+        public override string ToString()
+        {
+            return _habitacle.ToString();
         }
     }
 }

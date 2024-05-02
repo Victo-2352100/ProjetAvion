@@ -2,6 +2,9 @@ using System;
 
 namespace Bibliotheque
 {
+    /// <summary>
+    /// Représente le siège de l'avion en fonction de son passager
+    /// </summary>
     public class Siege
     {
         private Personne? _personne;
@@ -28,6 +31,11 @@ namespace Bibliotheque
             Personne? retour = _personne;
             _personne = null;
             return retour;
+        }
+        public override string ToString()
+        {
+            if (_personne == null) return " ";
+            return _personne.Nom[0].ToString();
         }
     }
 }

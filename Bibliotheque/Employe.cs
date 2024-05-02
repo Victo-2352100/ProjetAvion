@@ -12,9 +12,13 @@ namespace Bibliotheque
     public class Employe: Personne
     {
         //variables à ajouter éventuellement
-
+        /// <summary>
+        /// Constructeur pour la classe employé, hérite le nom de la personne
+        /// </summary>
+        /// <param name="nom">Nom de l'employé et donc de la personne</param>
         public Employe(string nom) : base(nom)
         {
+
         }
     }
 }

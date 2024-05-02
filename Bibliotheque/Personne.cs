@@ -13,10 +13,19 @@ namespace Bibliotheque
     {
         private string _nom;
         int? _age;
-
+        /// <summary>
+        /// Constructeur d'une personne selon son nom
+        /// </summary>
+        /// <param name="nom">Nom de la personne(surprenant)</param>
         public Personne(string nom)
         {
             _nom = nom;
+        }
+        /// <summary>
+        /// Accesseur du nom de la personne
+        /// </summary>
+        public string Nom {
+            get => _nom; 
         }
     }
 }

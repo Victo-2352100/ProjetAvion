@@ -12,9 +12,13 @@ namespace Bibliotheque
     public class Passager : Personne
     {
         //variables à ajouter éventuellement
-
+        /// <summary>
+        /// Constructeur du passager selon le nom de la personne
+        /// </summary>
+        /// <param name="nom">Nom du passager</param>
         public Passager(string nom) : base(nom)
         {
+
         }
     }
 }

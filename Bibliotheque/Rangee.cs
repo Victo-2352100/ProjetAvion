@@ -50,16 +50,20 @@ namespace Bibliotheque
             {
                 throw new ArgumentException("Une rangée doit contenir 2 sections.");
             }
+            
+            if ((sec[0].NombreSieges + sec[1].NombreSieges) > tailleHabitacle) 
+            {
+                throw new ArgumentException("Le nombre de sièges des sections est trop élevé.");
+            }
+            
             _sections = sec;
             _tailleVerticaleHabitacle = tailleHabitacle;
         }
         /// <summary>
         /// Accesseur pour le nombres de sièges, compte le nombre de sièges dans la rangée
         /// </summary>
-        public int NombreSieges
-        {
-            get
-            {
+        public int NombreSieges {
+            get {
                 return _sections[0].NombreSieges + _sections[1].NombreSieges;
             }
         }
@@ -107,7 +111,15 @@ namespace Bibliotheque
             StringBuilder sb = new StringBuilder();
             int espaces = TailleVerticaleHabitacle - (_sections[0].NombreSieges + _sections[1].NombreSieges); // nombre places vides entre sections
             sb.Append(_sections[0]);
-            sb.Append(' ', (espaces * 2) + 1); // nombre de ' '
+
+            sb.Append(':');
+            // /* sb.Append(' ', (espaces * 2) + 1); // nombre de ' '
+            for (int i = 0; i < espaces; i++) 
+            {
+                sb.Append("# ");
+            }
+            // */
+
             sb.Append(_sections[1]);
             return sb.ToString();
         }

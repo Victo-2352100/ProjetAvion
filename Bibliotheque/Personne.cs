@@ -12,7 +12,7 @@ namespace Bibliotheque
     public class Personne
     {
         private string _nom;
-        int? _age;
+        private int? _age;
         /// <summary>
         /// Constructeur d'une personne selon son nom
         /// </summary>

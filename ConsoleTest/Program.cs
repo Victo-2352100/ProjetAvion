@@ -29,8 +29,8 @@ namespace ConsoleTest
      
             // création des 2 sections pour la rangée
             Section[] ra1 = new Section[2];
-            ra1[0] = new Section(new Siege[2], false);
-            ra1[1] = new Section(new Siege[3], true);
+            ra1[0] = new Section(new Siege[3], false);
+            ra1[1] = new Section(new Siege[5], true);
 
             //remplissage
            

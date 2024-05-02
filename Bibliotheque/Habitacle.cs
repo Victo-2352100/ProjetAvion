@@ -31,7 +31,11 @@ namespace Bibliotheque
             }
             _tailleVerticale = tailleVerticale;
         }
-
+        /// <summary>
+        /// Construction d'un habitacle selon ses rangées et sa taille verticale.
+        /// </summary>
+        /// <param name="rangees"></param>
+        /// <param name="tailleVerticale"></param>
         public Habitacle(Rangee[] rangees, int tailleVerticale) {
             _rangees = rangees;
             _tailleVerticale = tailleVerticale;
@@ -90,7 +94,7 @@ namespace Bibliotheque
             // Boucle ajoutant les nombres + les rangées
             for (int i = 0; i < _rangees.Length; i++)
             {
-                sb.Append($"{i.ToString().PadLeft(_rangees.Length.ToString().Length)} {_rangees[i].ToString()}\n");
+                sb.Append($"{ i.ToString().PadLeft(_rangees.Length.ToString().Length) } { _rangees[i].ToString() }\n");
             }
             return sb.ToString();
         }

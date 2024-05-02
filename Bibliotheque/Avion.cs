@@ -27,15 +27,14 @@ namespace Bibliotheque
         /// <summary>
         /// Construction d'un avion avec un habitacle
         /// </summary>
-        /// <param name="tailleHorizontale">Nombre de rangées.</param>
-        /// <param name="tailleVerticale">Nombres de colonnes.</param>
-        public Avion(Habitacle habi)
+        /// <param name="habitacle">L'habitacle de l'avion.</param>
+        public Avion(Habitacle habitacle)
         {
-            if(habi == null)
+            if(habitacle == null)
             {
-                throw new ArgumentNullException(nameof(habi));
+                throw new ArgumentNullException(nameof(habitacle));
             }
-            _habitacle = habi;
+            _habitacle = habitacle;
         }
         /// <summary>
         /// Ajoute un passager au premier siège trouvé.

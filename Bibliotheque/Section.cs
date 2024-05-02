@@ -50,10 +50,8 @@ namespace Bibliotheque
         /// <summary>
         /// Accesseur pour le nombre de sièges, compte le nombre total dans la section
         /// </summary>
-        public int NombreSieges 
-        {
-            get
-            {
+        public int NombreSieges {
+            get {
                 return _sieges.Length;
             }    
         }
